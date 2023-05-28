@@ -32,13 +32,13 @@ async def media_receive_handler(_, m: Message):
     stream_link = f"{Var.URL}{Var.BIN_CHANNEL_WITHOUT_MINUS}/{log_msg.id}"
     short_link = f"{Var.URL}{Var.BIN_CHANNEL_WITHOUT_MINUS}/{log_msg.id}"
     rm = InlineKeyboardMarkup(
-        [[InlineKeyboardButton("Open", url=stream_link)]]
+        [[InlineKeyboardButton("📩 ᴅᴏᴡɴʟᴏᴀᴅ & sᴛʀᴇᴀᴍ 🖥", url=stream_link)]]
     )
     if Var.FQDN == Var.BIND_ADDRESS:
         # dkabl
         rm = None
     await m.reply_text(
-        text="<code>{}</code>\n(<a href='{}'>shortened</a>)".format(
+        text="<code>{}</code>\n\n(<a href=https://t.me/SkymoviesHDX>sᴋʏᴍᴏᴠɪᴇsʜᴅx</a>)".format(
             stream_link, short_link
         ),
         quote=True,
