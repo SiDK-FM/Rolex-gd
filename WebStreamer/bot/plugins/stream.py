@@ -20,7 +20,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
         | filters.video
         | filters.audio
         | filters.animation
-        | filters.voice
+        | filters.voice 
         | filters.video_note
         | filters.photo
         | filters.sticker
@@ -29,7 +29,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 )
 async def media_receive_handler(_, m: Message):
     log_msg = await m.copy(chat_id=Var.BIN_CHANNEL)
-    stream_link = f"{Var.URL}{Var.BIN_CHANNEL_WITHOUT_MINUS}/{log_msg.id}"
+    stream_link = f"https://stream.url2go.in/st?api=af5e38dfaf8b900b45335173d279b44d7ae4b2e9&url={Var.URL}{Var.BIN_CHANNEL_WITHOUT_MINUS}/{log_msg.id}"
     short_link = f"{Var.URL}{Var.BIN_CHANNEL_WITHOUT_MINUS}/{log_msg.id}"
     rm = InlineKeyboardMarkup(
         [[InlineKeyboardButton("📩 ᴅᴏᴡɴʟᴏᴀᴅ & sᴛʀᴇᴀᴍ 🖥", url=stream_link)]]
